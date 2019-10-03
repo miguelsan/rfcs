@@ -1,7 +1,7 @@
 - Feature Name: (fill me in with a unique ident, `my_awesome_feature`)
 - Start Date: (fill me in with today's date, YYYY-MM-DD)
-- RFC PR: [rust-lang/rfcs#0000](https://github.com/rust-lang/rfcs/pull/0000)
-- Rust Issue: [rust-lang/rust#0000](https://github.com/rust-lang/rust/issues/0000)
+- RFC PR: [kartevonmorgen/rfcs#0000](https://github.com/kartevonmorgen/rfcs/pull/0000)
+- Issue: [kartevonmorgen/rfcs#0000](https://github.com/kartevonmorgen/rfcs/issues/0000)
 
 # Summary
 [summary]: #summary
@@ -16,15 +16,22 @@ Why are we doing this? What use cases does it support? What is the expected outc
 # Guide-level explanation
 [guide-level-explanation]: #guide-level-explanation
 
-Explain the proposal as if it was already included in the language and you were teaching it to another Rust programmer. That generally means:
+Explain the proposal as if it was already included in the project
+and you were teaching it to another *Karte von morgen* user. That generally means:
 
 - Introducing new named concepts.
 - Explaining the feature largely in terms of examples.
-- Explaining how Rust programmers should *think* about the feature, and how it should impact the way they use Rust. It should explain the impact as concretely as possible.
+- Explaining how users should *think* about the feature,
+  and how it should impact the way they use the *Karte von morgen*.
+  It should explain the impact as concretely as possible.
 - If applicable, provide sample error messages, deprecation warnings, or migration guidance.
-- If applicable, describe the differences between teaching this to existing Rust programmers and new Rust programmers.
+- If applicable, describe the differences between teaching this to existing KVM users and new KVM users.
 
-For implementation-oriented RFCs (e.g. for compiler internals), this section should focus on how compiler contributors should think about the change, and give examples of its concrete impact. For policy RFCs, this section should provide an example-driven introduction to the policy, and explain its impact in concrete terms.
+For implementation-oriented RFCs (e.g. for OpenFairDB internals),
+this section should focus on how contributors should think about the change,
+and give examples of its concrete impact.
+For policy RFCs, this section should provide an example-driven introduction to the policy,
+and explain its impact in concrete terms.
 
 # Reference-level explanation
 [reference-level-explanation]: #reference-level-explanation
@@ -35,7 +42,8 @@ This is the technical portion of the RFC. Explain the design in sufficient detai
 - It is reasonably clear how the feature would be implemented.
 - Corner cases are dissected by example.
 
-The section should return to the examples given in the previous section, and explain more fully how the detailed proposal makes those examples work.
+The section should return to the examples given in the previous section,
+and explain more fully how the detailed proposal makes those examples work.
 
 # Drawbacks
 [drawbacks]: #drawbacks
@@ -55,16 +63,21 @@ Why should we *not* do this?
 Discuss prior art, both the good and the bad, in relation to this proposal.
 A few examples of what this can include are:
 
-- For language, library, cargo, tools, and compiler proposals: Does this feature exist in other programming languages and what experience have their community had?
+- For language, library, tools, frontend and backend proposals:
+  Does this feature exist in other projects and what experience have their community had?
 - For community proposals: Is this done by some other community and what were their experiences with it?
 - For other teams: What lessons can we learn from what other communities have done here?
-- Papers: Are there any published papers or great posts that discuss this? If you have some relevant papers to refer to, this can serve as a more detailed theoretical background.
+- Papers: Are there any published papers or great posts that discuss this?
+  If you have some relevant papers to refer to, this can serve as a more detailed theoretical background.
 
-This section is intended to encourage you as an author to think about the lessons from other languages, provide readers of your RFC with a fuller picture.
-If there is no prior art, that is fine - your ideas are interesting to us whether they are brand new or if it is an adaptation from other languages.
+This section is intended to encourage you as an author to think about the lessons from other projects,
+provide readers of your RFC with a fuller picture.
+If there is no prior art, that is fine - your ideas are interesting to us whether they are brand new
+or if it is an adaptation from other projects.
 
-Note that while precedent set by other languages is some motivation, it does not on its own motivate an RFC.
-Please also take into consideration that rust sometimes intentionally diverges from common language features.
+Note that while precedent set by other projects is some motivation, it does not on its own motivate an RFC.
+Please also take into consideration that *Karte von morgen* sometimes intentionally diverges from common
+GIS projects.
 
 # Unresolved questions
 [unresolved-questions]: #unresolved-questions
@@ -77,9 +90,9 @@ Please also take into consideration that rust sometimes intentionally diverges f
 [future-possibilities]: #future-possibilities
 
 Think about what the natural extension and evolution of your proposal would
-be and how it would affect the language and project as a whole in a holistic
+be and how it would affect the project as a whole in a holistic
 way. Try to use this section as a tool to more fully consider all possible
-interactions with the project and language in your proposal.
+interactions with the project in your proposal.
 Also consider how the this all fits into the roadmap for the project
 and of the relevant sub-team.
 
