@@ -1,4 +1,4 @@
-# 0008 - Associate users with entries
+# 0000 - Associate users with entries
 
 ## Status
 [status]: #status

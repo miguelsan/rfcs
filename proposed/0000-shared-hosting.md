@@ -1,4 +1,4 @@
-# 0006 - Backup strategy
+# 0000 - Shared hosting
 
 ## Status
 [status]: #status
@@ -8,8 +8,9 @@ Proposed
 ## Summary
 [summary]: #summary
 
-The OpenFairDB database should be backed up automatically to prevent data loss
-and to be able to restore a recent version of the database after spam attacks.
+Both the Kvm [frontend](https://github.com/kartevonmorgen/kartevonmorgen) and
+[backend](https://github.com/kartevonmorgen/openfairdb) shall be hosted on a
+shared platform or server.
 
 ## Context
 [context]: #context

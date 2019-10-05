@@ -1,4 +1,4 @@
-# 0007 - Shared hosting
+# 0000 - Awesome frontend
 
 ## Status
 [status]: #status
@@ -8,9 +8,8 @@ Proposed
 ## Summary
 [summary]: #summary
 
-Both the Kvm [frontend](https://github.com/kartevonmorgen/kartevonmorgen) and
-[backend](https://github.com/kartevonmorgen/openfairdb) shall be hosted on a
-shared platform or server.
+The Kvm [frontend](https://github.com/kartevonmorgen/kartevonmorgen) shall be accessible
+from multiple clients (browser, mobile) and the code shall be maintainable.
 
 ## Context
 [context]: #context

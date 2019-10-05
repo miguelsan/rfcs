@@ -1,4 +1,4 @@
-# 0002 - Extended subscriptions
+# 0000 - Extended subscriptions
 
 ## Status
 [status]: #status

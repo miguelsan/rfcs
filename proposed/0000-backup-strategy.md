@@ -1,4 +1,4 @@
-# 0003 - Public events
+# 0000 - Backup strategy
 
 ## Status
 [status]: #status
@@ -8,22 +8,13 @@ Proposed
 ## Summary
 [summary]: #summary
 
-Users shall be able to create public events in addition to entries.
+The OpenFairDB database should be backed up automatically to prevent data loss
+and to be able to restore a recent version of the database after spam attacks.
 
 ## Context
 [context]: #context
 
 > This section describes the forces at play, including technological, political, social, and project local. These forces are probably in tension, and should be called out as such. The language in this section is value-neutral. It is simply describing facts.
-
-> MVP: Termine können genauso wie Initiativen und
-Unternehmen eingetragen und verschlagwortet werden
-
-> NTH:
-> - Termine können wie in Trello als Kalenderansicht dargestellt
-werden.
-> - Termine können über Webdav ausgelesen und bei
-entsprechender Berechtigung auch eingelesen werden.
-(eingeloggte Nutzer, admin entsprechender Schlagworte)
 
 ## Decision
 [decision]: #decision

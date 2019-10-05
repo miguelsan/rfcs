@@ -1,4 +1,4 @@
-# 0004 - Moderation of entries, comments, and ratings
+# 0000 - Moderation of entries, comments, and ratings
 
 ## Status
 [status]: #status
