@@ -14,19 +14,22 @@ and to be able to restore a recent version of the database after spam attacks.
 ## Context
 [context]: #context
 
-> This section describes the forces at play, including technological, political, social, and project local. These forces are probably in tension, and should be called out as such. The language in this section is value-neutral. It is simply describing facts.
+All contents of *kartevonmorgen.org* are stored in an SQLite database, i.e. a single file
+on the server. Currently this file is backed up manually, every few days or sometimes
+weeks. The backup is stored both on the server and on private, external storage media.
 
 ## Decision
 [decision]: #decision
 
-> This section describes our response to these forces. It is stated in full sentences, with active voice. "We will ..."
+- A daily backup is generated automatically, compressed and stored on the server in a dedicated folder
+- The backup folder is synchronized periodically (daily/weekly?) via rsync or syncthing with external storage
+- NTH: Old backups are selectively deleted, e.g. only te most recent 30 daily backups
+are kept, for previous month only the last daily backup ist kept.
 
 ## Consequences
 [consequences]: #consequences
 
-> This section describes the resulting context, after applying the decision. All consequences should be listed here, not just the "positive" ones. A particular decision may have positive, negative, and neutral consequences, but all of them affect the team and project in the future.
+Which system initiates the synchronization of the backup folder, i.e. where to store the credentials?
 
 ## References
 [references]: #references
-
-- http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions
