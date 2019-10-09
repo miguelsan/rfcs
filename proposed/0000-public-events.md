@@ -13,6 +13,8 @@ Users shall be able to create public events in addition to entries.
 ## Context
 [context]: #context
 
+In addition to entries (= places) every user should be able to create and edit events.
+
 > This section describes the forces at play, including technological, political, social, and project local. These forces are probably in tension, and should be called out as such. The language in this section is value-neutral. It is simply describing facts.
 
 > MVP: Termine können genauso wie Initiativen und
@@ -32,6 +34,9 @@ entsprechender Berechtigung auch eingelesen werden.
 
 ## Consequences
 [consequences]: #consequences
+
+There is no control about who creates events when and where. The ability to edit an event is not
+restricted i.e. any other user could move the events created by other users in time and space.
 
 > This section describes the resulting context, after applying the decision. All consequences should be listed here, not just the "positive" ones. A particular decision may have positive, negative, and neutral consequences, but all of them affect the team and project in the future.
 

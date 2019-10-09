@@ -68,14 +68,47 @@ Oder-Suche
 ## Decision
 [decision]: #decision
 
-> This section describes our response to these forces. It is stated in full sentences, with active voice. "We will ..."
+- The service will be implemented as an isolated component within OpenFairDB
+- A modification time stamp needs to be added to entries in the search index
+- The search index allows filtering by modification time stamp
+- Subscriptions consist of
+    - Name
+    - Selector of either
+        - either entry id
+        - or search query
+            - Bounding box (mandatory)
+            - List of tags (might be empty)
+            - Search text (optional)
+    - Max. modification time stamp of the most recent entry that has been processed (initial: creation time stamp of the subscription)
+- Subscriptions are owned by users, one user per subscription
+- Users may create multiple subscriptions
+- All subscriptions are processed independently
+- Subscriptions will be processed periodically starting at a configurable time, i.e. daily at 7 a.m. (to avoid disctractions by nightly emails)
+- For each subscription a search request will be submitted (if selector is not an entry id)
+- The number of search results is limited to 500, applying the default scoring
+- The search results are collected into an e-mail, one per subscription
+- The email contains:
+    - name of the subscription in the subject
+    - for each modified entry:
+        - modification time stamp
+        - title of entry
+        - link to entry
+- The e-mail contents are submitted to external e-mail service provider that sends them.
+Sending e-mails via *sendmail* locally is not recommended.
 
 ## Consequences
 [consequences]: #consequences
 
-> This section describes the resulting context, after applying the decision. All consequences should be listed here, not just the "positive" ones. A particular decision may have positive, negative, and neutral consequences, but all of them affect the team and project in the future.
+The requirement to include tags and a search text to the subscription entails that the search
+index must be used for determining the modified entries. Currently recently modified entries
+are retrieved from the database without any filtering by bounding box, tags, or a search text.
+
+The special case that handles subscribing for single entries requires a separate code path.
+An alternative would be to subscribe for single entries by a small or empty bounding box.
+But then the modification of moving an entry out of this bounding box would be missed.
+
+Migrating existing subscriptions adds additional costs. We recommend to discard all existing
+subscriptions and start with a fresh database.
 
 ## References
 [references]: #references
-
-- http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions
