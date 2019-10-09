@@ -30,7 +30,7 @@ but do not want to add one unig tag to all entries of that topic, to make this t
 - We can solve **spelling errors**. If #urbang-ardening contains the hashtags #urbangardening,  #urban-guardening and #stadtgarten,
   we automatically did a translation and connected synonyms and wrong written tags.
 - #Futurefashion wants to create a map of all fair clothing-shops.
-  Untill know a user would have to add all tags like #futurefashion #fairfashion #kleidung
+  Until know a user would have to add all tags like #futurefashion #fairfashion #kleidung
 
 # Future possibilities
 [future-possibilities]: #future-possibilities
@@ -81,6 +81,11 @@ to agree on a canonical language, i.e. *English*.  The actual language of
 the synonyms is unknown, i.e. filtering tags by language is not possible.
 If only canonical tags are proposed then users will always see the tags
 of the canonical language instead of their local language.
+
+One option would be to use the *synonym* relationship only within a single language.
+The canonical terms in different languages could be linked by a separate relationship,
+i.e. *i18n*. The language of a tag becomes a separate property or relation of each tag
+with the cardinality 0..*, i.e. any number of languages per tag is possible.
 
 ## References
 [references]: #references
