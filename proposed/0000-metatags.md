@@ -47,9 +47,10 @@ but do not want to add one unig tag to all entries of that topic, to make this t
 Tags will still remain plain tags without any metadata. Additionally we will introduce directed relationships from
 a *source* to a *target* tag with the following roles:
 
+- *generalization*: The source tag is a specialization of the target tag. Examples: target = `#social-economy`, sources = `#socent`/`#gwö`/`#b-corp`/`#b-corp`/`sustainabel-finance`
 - *synonym*: The terms of both tags name the *same* concept. The *source* tag is the *alias* term, the *target* tag
 is the preferred *canonical* term. Example: target = `#urban-gardening`, source = `#urbangardening` (alternative name), source = `#urban-guardening` (misspelling), source = `#stadtgarten` (german synonym).
-- *generalization*: The source tag is a specialization of the target tag. Examples: target = `#social-economy`, sources = `#socent`/`#gwö`/`#b-corp`/`#b-corp`/`sustainabel-finance`
+- *i18n*: A special kind of synonym relationship between canonical terms of different languages? See [Consequences](consequences).
 
 ## Consequences
 [consequences]: #consequences
