@@ -41,7 +41,8 @@ The following issues need to be solved to change the situation:
 ## Decision
 [decision]: #decision
 
-> This section describes our response to these forces. It is stated in full sentences, with active voice. "We will ..."
+We will rewrite the whole frontent in [Rust](https://rust-lang.org).
+The result will be a [WASM](https://en.wikipedia.org/wiki/WebAssembly) module.
 
 ## Consequences
 [consequences]: #consequences
