@@ -17,23 +17,23 @@ shall be accessible from multiple clients (browser, mobile) and the code shall b
 The current frontend is in a bad state.
 The following issues need to be solved to change the situation:
 
-- **Maintainability**
+- **Maintainability**  
   Due to the untyped programming language JavaScript most types of code refactoring are risky to realize.
   This gets emphasized by external dependencies that easily can break the web application.
   Often a simple dependency update leads to multiple hours of fighting the dependency hell.
   Unfortunately a handful of bugs don't occur during the refactoring process but during the
   runtime (because JS can't check correctness at compile time).
 
-- **Complexity**
+- **Complexity**  
   The current complexity of the codebase is grown due to a lot of dirty quick fixes.
   This not only makes it hard for the community to contribute to the project
   but it also makes it costly to introduce new features.
 
-- **Tests**
+- **Tests**  
   There are few tests but most of the code is untested.
   This makes it even harder to refactor and maintain the project.
 
-- **File size**
+- **File size**  
   The packed JavaScript bundle size was 5.3 MB some time ago.
   In the meanwhile its shrunken to 1.5 MB but that's still a bunch of bytes that
   needs to be downloaded at once.
@@ -43,6 +43,23 @@ The following issues need to be solved to change the situation:
 
 We will rewrite the whole frontent in [Rust](https://rust-lang.org).
 The result will be a [WASM](https://en.wikipedia.org/wiki/WebAssembly) module.
+
+We made this decision based on following reasons.
+We expect to achieve
+
+- a much better **maintainability** because:
+  - Rust is statically typed
+  - refactoring is easy (the compiler does a very good job)
+  - the package manager [Cargo](https://doc.rust-lang.org/stable/cargo/) provides
+    a reliable dependency management
+  - most mistakes will popup at compile-time
+- a reduced **complexity** because we can get rid of most legacy code
+- a more efficient **testing** because we can focus on business logic
+  (instead of testing trivial things like it is required in JavaScript)
+- a mobile friendly **file size** because the app is packed in a binary format
+  (instead of text like it is with JavaScript)
+- a better API integration because we can **share** modules with the backend (OpenFairDB)
+  that is also written in Rust.
 
 ## Consequences
 [consequences]: #consequences
