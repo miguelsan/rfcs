@@ -41,7 +41,7 @@ The following issues need to be solved to change the situation:
 ## Decision
 [decision]: #decision
 
-We will rewrite the whole frontent in [Rust](https://rust-lang.org).
+We will port the whole frontent to [Rust](https://rust-lang.org).
 The result will be a [WASM](https://en.wikipedia.org/wiki/WebAssembly) module.
 
 We made this decision based on following reasons.
@@ -64,7 +64,14 @@ We expect to achieve
 ## Consequences
 [consequences]: #consequences
 
-> This section describes the resulting context, after applying the decision. All consequences should be listed here, not just the "positive" ones. A particular decision may have positive, negative, and neutral consequences, but all of them affect the team and project in the future.
+The decision has the following consequences:
+
+- developers need to know or learn Rust
+- [Leaflet](https://leafletjs.com/) can't be integrated directly
+- the admin frontend of the OpenFairDB can be merged into the frontend
+- probably the whole codebase needs to be ported at once
+- we can't use component libraries that are based on React
+- the app won't work with old browsers
 
 ## References
 [references]: #references
