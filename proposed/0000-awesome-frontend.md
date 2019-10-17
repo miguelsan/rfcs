@@ -77,6 +77,8 @@ We expect to achieve
 The decision has the following consequences:
 
 - developers need to know or learn Rust
+  - The Developers at falanster might have difficulties. It could result in the loss of alle their efforts this summmer?! or they will split of completly and use the old frontend.
+  - Florian will not be able to help.
 - [Leaflet](https://leafletjs.com/) can't be integrated directly
 - we can't use component libraries that are based on React
 - the app won't work with old browsers
