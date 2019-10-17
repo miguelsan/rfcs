@@ -1,9 +1,9 @@
-# 0000 - Moderation of entries, comments, and ratings
+# 0001 - Moderation of entries, comments, and ratings
 
 ## Status
 [status]: #status
 
-Proposed
+Accepted
 
 ## Summary
 [summary]: #summary
