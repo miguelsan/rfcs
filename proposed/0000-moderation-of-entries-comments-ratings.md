@@ -42,11 +42,11 @@ Anonymous users or users with unverified e-mail address are considered as _guest
 - If the user is logged in entries are associated with the user when modified: `modified_by` (optional).
 - Entries can be archived and restored (unarchived) by scouts or admins.
 - If an entry is archived it must be tagged with one or more of the following predefined _archive_ tags:
-    - #duplicate
-    - #obsolete
-    - #invalid
-    - #illegal
-    - #spam
+    - #archive-duplicate
+    - #archive-obsolete
+    - #archive-invalid
+    - #archive-illegal
+    - #archive-spam
 - When archiving an entry it is not modified. Only _archive_ tags are added and `modified_by` is set.
 - Archived entries cannot be modified, only when restored.
 - The _archive_ tags are regular tags that can be used by anyone.
@@ -59,6 +59,7 @@ Anonymous users or users with unverified e-mail address are considered as _guest
 - Depending on the role of the logged-in user the front-end may show additional views
 - The available actions in the front-end depend on the role of the logged in user,
 i.e. additional actions are available for certain roles.
+- The admin interface includes a link to edit entries directly on kartevonmorgen.org.
 
 ## Consequences
 [consequences]: #consequences
@@ -66,6 +67,11 @@ i.e. additional actions are available for certain roles.
 - The database schema for entries needs to be extended by adding the addtional field `modified_by`.
 - The public API needs to be extended with additional operations and parameters.
 - The back-end needs to verify that users are authorized to execute operations depending on their role.
+
+### Open Issues
+
+- What happens with existing links that have been archived? Should the content of archived
+entries be returned if they are explicitly requested by the API?
 
 ## References
 [references]: #references
