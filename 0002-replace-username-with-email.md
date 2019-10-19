@@ -1,17 +1,19 @@
-# 0000 - Replace user name by e-mail address
+# 0002 - Replace user name by e-mail address
 
 ## Status
 [status]: #status
 
-Proposed
+Accepted
 
 ## Summary
 [summary]: #summary
 
+Users shall be uniquely identified by an e-mail address only.
+
 ## Context
 [context]: #context
 
-Existing user are identified by both a *user name* and an *e-mail address*.
+Currentrly existing users are identified by both a *user name* and an *e-mail address*.
 Only the user name is guaranteed to be unique, but not the e-mail address.
 
 The database already contains different users for the same e-mail address:
