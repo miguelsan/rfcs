@@ -39,7 +39,9 @@ Anonymous users or users with unverified e-mail address are considered as _guest
 ### Common / Back-end
 
 - Entries are never physically deleted, only archived.
-- If the user is logged in entries are associated with the user when modified: `modified_by` (optional).
+- If the user is logged in entries are associated with the user when modified: `created_by` (optional).
+This is the same field name that is used for events and identifies the user that _created_ this version,
+i.e. it applies to both newly created and updated entries.
 - Entries can be archived and restored (unarchived) by scouts or admins.
 - If an entry is archived it must be tagged with one or more of the following predefined _archive_ tags:
     - #archive-duplicate
@@ -47,7 +49,7 @@ Anonymous users or users with unverified e-mail address are considered as _guest
     - #archive-invalid
     - #archive-illegal
     - #archive-spam
-- When archiving an entry it is not modified. Only _archive_ tags are added and `modified_by` is set.
+- When archiving an entry it is not modified. Only _archive_ tags are added and `created_by` is set.
 - Archived entries cannot be modified, only when restored.
 - The _archive_ tags are regular tags that can be used by anyone.
 - The UI may offer a convenient function for logged-in user to report entries by assigning _archive_ tags.
@@ -64,7 +66,7 @@ i.e. additional actions are available for certain roles.
 ## Consequences
 [consequences]: #consequences
 
-- The database schema for entries needs to be extended by adding the addtional field `modified_by`.
+- The database schema for entries needs to be extended by adding the addtional field `created_by`.
 - The public API needs to be extended with additional operations and parameters.
 - The back-end needs to verify that users are authorized to execute operations depending on their role.
 
